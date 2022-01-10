@@ -2,10 +2,13 @@
 
 source 'https://rubygems.org'
 
-gem 'capybara'
-gem 'rack'
-gem 'rspec'
-gem 'rubocop'
-gem 'simplecov'
+gem 'bcrypt'
+gem 'pg'
+gem 'rubocop', require: false
 gem 'sinatra'
-gem 'sinatra-contrib'
+gem 'sinatra-flash'
+
+gem 'capybara', require: false, group: :test
+gem 'rspec', require: false, group: :test
+gem 'simplecov', require: false, group: :test
+gem 'simplecov-console', require: false, group: :test
