@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'pg'
 
 p 'Setting up test database...'

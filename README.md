@@ -15,3 +15,9 @@ Setting up the database:
 2. create the database using the command CREATE DATABASE bookmark_manager;
 3. connect to the database with \c bookmark_manager
 4. run the query saved in the file 01_create_bookmarks_table.sql
+
+User Story 2:
+
+As a frequent user of the Internet
+So I can store one of my favourite websites to visit later
+I want to add new bookmarks to my Bookmark Manager
