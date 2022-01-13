@@ -1,5 +1,3 @@
-#class BookmarkManager < Sinatra::Base
-
 require 'sinatra/base'
 require 'sinatra/reloader'
 require './lib/bookmark'
@@ -23,7 +21,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/bookmarks' do
-    Bookmark.create(url: params['url'])
+    Bookmark.create(url: params[:url])
     redirect '/bookmarks'
   end
 
