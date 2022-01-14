@@ -1,11 +1,19 @@
-<p><b><u>List of your saved bookmarks:</u></b></p>
-<br>
-<ol>
-  <% @bookmarks.each do |bookmark| %>
-    <li>
-      <a href="<%= bookmark.url %>">
-        <%= bookmark.title %>
-      </a>
-    </li>
-  <% end %>
-</ol>
+<STYLE>A {text-decoration: none;} </STYLE>
+<body>
+  <p><b><u>List of your saved bookmarks:</u></b></p>
+  <br>
+  <ol>
+    <% @bookmarks.each do |bookmark| %>
+      <li class='bookmark' id='bookmark-<%= bookmark.id %>'>
+        <form action='/bookmarks/<%= bookmark.id %>' method='post'>
+          <a href="<%= bookmark.url %>" target='_blank'>
+            <%= bookmark.title %>
+          </a>
+          <input type='hidden' name='_method' value='DELETE' />
+          <input type='submit' value='❌' />
+        </form>
+      </li>
+    <% end %>
+  </ol>
+</body>
+

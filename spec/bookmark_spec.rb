@@ -29,4 +29,12 @@ require 'database_helpers'
       expect(bookmark.title).to eq 'Test Bookmark'
       expect(bookmark.url).to eq 'http://www.example.org'   
   end
+
+  describe '.delete' do
+    it 'deletes the given bookmark' do
+      bookmark = Bookmark.create(title: 'Makers', url: 'https://www.makersacademy.com')
+      Bookmark.delete(id: bookmark.id)
+      expect(Bookmark.all.length).to eq 0
+    end
+  end 
 end
